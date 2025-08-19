@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Equipos de la Liga MX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url("https://i.pinimg.com/736x/9e/fa/91/9efa91b3c0e2bec1eed6fa05ade07bef.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Impact', sans-serif;
+      font-size: 3em;
+      color: #FFD700;
+      text-shadow: 2px 2px 6px #000;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .equipos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .equipo {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0px 0px 10px #000;
+    }
+
+    .equipo img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+
+    .equipo:hover {
+      transform: scale(1.05);
+      background: rgba(255, 215, 0, 0.8);
+      color: #000;
+    }
+
+    .equipo:hover img {
+      transform: scale(1.2);
+    }
+
+    .equipo p {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #32CD32;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    hr {
+      border: 1px solid #FFD700;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .volver a {
+      font-size: 1.2em;
+      color: #ff4c4c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .volver a:hover {
+      color: #32CD32;
+      text-shadow: 1px 1px 6px #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏟️ Equipos de la Liga MX ⚽</h1>
+  <p>
+    Actualmente, la <b>Liga MX</b> cuenta con <b>18 equipos</b>. Aquí algunos de los más reconocidos:
+  </p>
+
+  <div class="equipos">
+    <div class="equipo">
+      <a href="https://www.clubamerica.com.mx/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Club_Am%C3%A9rica_crest.svg/1200px-Club_Am%C3%A9rica_crest.svg.png" alt="América">
+        <p>América</p>
+      </a>
+    </div>
+    <div class="equipo">
+      <a href="https://www.chivasdecorazon.com.mx/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/Guadalajara_CD.svg/185px-Guadalajara_CD.svg.png" alt="Chivas">
+        <p>Chivas</p>
+      </a>
+    </div>
+    <div class="equipo">
+      <a href="https://cfcruzazul.com/" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpwSNhvltFIFXzo9AbWnSjg-xXQ4WVbKHS2Q&s" alt="Cruz Azul">
+        <p>Cruz Azul</p>
+      </a>
+    </div>
+    <div class="equipo">
+      <a href="https://pumas.mx/" target="_blank">
+        <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/233.png" alt="Pumas UNAM">
+        <p>Pumas UNAM</p>
+      </a>
+    </div>
+    <div class="equipo">
+      <a href="https://tigres.com.mx/" target="_blank">
+        <img src="https://static.wikia.nocookie.net/liga-mx/images/d/d2/TIGlogo.png/revision/latest/scale-to-width/360?cb=20190816200645&path-prefix=es" alt="Tigres UANL">
+        <p>Tigres UANL</p>
+      </a>
+    </div>
+    <div class="equipo">
+      <a href="https://rayados.com/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Club_de_F%C3%BAtbol_Monterrey_logo.svg/250px-Club_de_F%C3%BAtbol_Monterrey_logo.svg.png" alt="Monterrey">
+        <p>Monterrey</p>
+      </a>
+    </div>
+    <div class="equipo">
+      <a href="https://www.soyfiera.com/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Club_Le%C3%B3n_FC.svg/800px-Club_Le%C3%B3n_FC.svg.png" alt="León">
+        <p>León</p>
+      </a>
+    </div>
+    <div class="equipo">
+      <a href="https://www.clubsantos.mx/" target="_blank">
+        <img src="https://santosshop.mx/cdn/shop/files/LOGO_SANTOS_COLOR_PNG.png?v=1706206989" alt="Santos Laguna">
+        <p>Santos Laguna</p>
+      </a>
+    </div>
+  </div>
+
+  <p>
+    Cada club tiene su propia historia, colores y afición que lo hacen único en el fútbol mexicano.
+  </p>
+
+  <hr>
+  <p class="volver"><a href="indice.html">🏆 Volver al índice</a></p>
+</body>
+</html>

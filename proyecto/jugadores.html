@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Jugadores destacados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url("https://i.pinimg.com/736x/9e/fa/91/9efa91b3c0e2bec1eed6fa05ade07bef.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Impact', sans-serif;
+      font-size: 3em;
+      color: #FFD700;
+      text-shadow: 2px 2px 6px #000;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .jugador {
+      background: rgba(0,0,0,0.75);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 0px 15px #000;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .jugador:hover {
+      transform: scale(1.07);
+      box-shadow: 0px 0px 20px #FFD700;
+    }
+
+    .jugador img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .jugador h3 {
+      margin: 10px 0;
+      font-size: 1.3em;
+      color: #32CD32;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    hr {
+      border: 1px solid #FFD700;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .volver a {
+      font-size: 1.2em;
+      color: #ff4c4c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .volver a:hover {
+      color: #32CD32;
+      text-shadow: 1px 1px 6px #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌟 Jugadores históricos y actuales ⚽</h1>
+  <p>
+    La Liga MX ha visto pasar grandes estrellas, tanto mexicanas como extranjeras:
+  </p>
+
+  <div class="galeria">
+    <div class="jugador">
+      <img src="https://static.wikia.nocookie.net/liga-mx/images/3/36/CBlanco.jpg/revision/latest?cb=20200102052120&path-prefix=es" alt="Cuauhtémoc Blanco">
+      <h3>Cuauhtémoc Blanco</h3>
+    </div>
+    <div class="jugador">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/1330192171801?$Mobile$&fit=wrap&wid=312" alt="Hugo Sánchez">
+      <h3>Hugo Sánchez</h3>
+    </div>
+    <div class="jugador">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU7vXwtQdrV18BnReHVUeFKvqtQf3QMmqLGg&s" alt="Jared Borgetti">
+      <h3>Jared Borgetti</h3>
+    </div>
+    <div class="jugador">
+      <img src="https://blob.soyreferee.com/images/2025/01/29/gignac-salida-tigres-lesion-focus-0-0-638-638.webp" alt="Gignac">
+      <h3>André-Pierre Gignac</h3>
+    </div>
+    <div class="jugador">
+      <img src="https://www.futboltotal.com.mx/wp-content/uploads/2025/01/leon-y-el-millonario-sueldo-de-james-rodriguez-mayor-a-estrella-del-liverpool.jpg" alt="James">
+      <h3>James Rodrigez</h3>
+    </div>
+ <div class="jugador">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe8unJqugsmK4gfGcK0LTsmD3dMQUvd-eKaA&s" alt="Keylor Navas">
+      <h3>Keylor Navas</h3>
+    </div>
+
+  </div>
+
+  <p>
+    Estos jugadores han dejado huella con goles, campeonatos y momentos inolvidables.
+  </p>
+
+  <hr>
+  <p class="volver"><a href="indice.html">🏟️ Volver al índice</a></p>
+</body>
+</html>

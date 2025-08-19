@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clásicos de la Liga MX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url("https://img.freepik.com/foto-gratis/campo-futbol-verde_1417-1652.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Impact', sans-serif;
+      font-size: 3em;
+      color: #FFD700;
+      text-shadow: 2px 2px 6px #000;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .clasicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .clasico {
+      background: rgba(0,0,0,0.75);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 0px 15px #000;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .clasico:hover {
+      transform: scale(1.07);
+      box-shadow: 0px 0px 20px #FFD700;
+    }
+
+    .clasico img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: opacity 0.3s;
+    }
+
+    .clasico img:hover {
+      opacity: 0.9;
+    }
+
+    .clasico h3 {
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #32CD32;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    hr {
+      border: 1px solid #FFD700;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .volver a {
+      font-size: 1.2em;
+      color: #ff4c4c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .volver a:hover {
+      color: #32CD32;
+      text-shadow: 1px 1px 6px #fff;
+    }
+
+    /* Estilo del modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      background: #000;
+      border-radius: 12px;
+      padding: 10px;
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    .close {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #ff4c4c;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      padding: 5px 12px;
+    }
+
+    .close:hover {
+      background: #FFD700;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 Clásicos de la Liga MX ⚽</h1>
+  <p>
+    Los partidos más esperados de cada temporada son los clásicos:
+  </p>
+
+  <div class="clasicos">
+    <div class="clasico" data-video="https://www.tiktok.com/@stalinflores_21/video/7481158960981069061?q=am%C3%A9rica%20vs%20chivas&t=1755585238500">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHPHxThEMWlHAL_L53OCxTOzxqp-cYeC1tNw&s" alt="Clásico Nacional">
+      <h3>Clásico Nacional: América vs Chivas</h3>
+    </div>
+    <div class="clasico" data-video="https://www.youtube.com/embed/JjehmwE2M4w">
+      <img src="https://i.ytimg.com/vi/4u7svuN7lT0/maxresdefault.jpg" alt="Clásico Joven">
+      <h3>Clásico Joven: América vs Cruz Azul</h3>
+    </div>
+    <div class="clasico" data-video="https://www.youtube.com/embed/_H9olny30iQ">
+      <img src="https://www.record.com.mx/sites/default/files/articulos/2024/10/11/record_-_2024-10-11t144613.392.jpg" alt="Clásico Regio">
+      <h3>Clásico Regio: Tigres vs Monterrey</h3>
+    </div>
+    <div class="clasico" data-video="https://www.youtube.com/embed/HWRF6SVuxCI">
+      <img src="https://i.ytimg.com/vi/9AvBNv6LT1c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAXR0KFmbWnwYE4b5WXlrwI3XnO2Q" alt="Clásico Tapatío">
+      <h3>Clásico Tapatío: Atlas vs Chivas</h3>
+    </div>
+  </div>
+
+  <p>
+    Estos encuentros generan gran expectativa entre los aficionados.
+  </p>
+
+  <hr>
+  <p class="volver"><a href="indice.html">⚽ Volver al índice</a></p>
+
+  <!-- Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <button class="close" id="closeBtn">&times;</button>
+      <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("videoModal");
+    const videoFrame = document.getElementById("videoFrame");
+    const closeBtn = document.getElementById("closeBtn");
+    const clasicos = document.querySelectorAll(".clasico");
+
+    clasicos.forEach(clasico => {
+      clasico.addEventListener("click", () => {
+        const videoUrl = clasico.getAttribute("data-video");
+        videoFrame.src = videoUrl + "?autoplay=1";
+        modal.style.display = "flex";
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+      videoFrame.src = "";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        videoFrame.src = "";
+      }
+    });
+  </script>
+</body>
+</html>
+
